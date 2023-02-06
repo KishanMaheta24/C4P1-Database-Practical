@@ -20,7 +20,7 @@ CREATE TABLE user_details(
 
 > Table
 
-![user_details](user_details.png)
+![user_details](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/user_details.png)
 
 
 ---
@@ -41,7 +41,7 @@ CREATE TABLE products(
 
 > Table
 
-![products](products.png)
+![products](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/products.png)
 
 
 ---
@@ -64,7 +64,7 @@ FOREIGN KEY(order_user_id) REFERENCES user_details(user_id) ON DELETE CASCADE
 
 > Table
 
-![orders](orders.png)
+![orders](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/orders.png)
 
 ---
 
@@ -87,7 +87,7 @@ CREATE TABLE order_details(
 
 > Table
 
-![order_details](order_details.png)
+![order_details](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/order_details.png)
 
 
 ---
@@ -153,7 +153,7 @@ INNER JOIN user_details ON order_user_id=user_id AND order_status NOT IN ("Deliv
 ```
 - Output
 
-![image](q1.png)
+![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q1.png)
 
 ---
 
@@ -166,7 +166,7 @@ SELECT * FROM orders INNER JOIN user_details ON order_user_id=user_id ORDER BY o
 ```
 - Output
 
-![image](q2.png)
+![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q2.png)
 
 ---
 
@@ -180,7 +180,7 @@ SELECT order_user_id,concat(first_name," ",last_name) as "name", count(order_use
 
 - Output
 
-![image](q3.png)
+![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q3.png)
 
 ---
 
@@ -193,7 +193,7 @@ SELECT * FROM user_details WHERE user_id NOT IN (SELECT DISTINCT order_user_id f
 ```
 - Output
 
-![image](q4.png)
+![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q4.png)
 
 
 ---
@@ -207,7 +207,7 @@ SELECT products.product_id,product_name,count(products.product_id) as "total" FR
 
 - Output
 
-![image](q5_f.png)
+![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q5_f.png)
 
 
 ---
@@ -222,7 +222,7 @@ SELECT products.product_id,product_name,count(products.product_id) as "total" FR
     ```
     - Output
 
-    ![image](q6_1.png)
+    ![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q6_1.png)
 - Most Cheapest
 
     ```SQL
@@ -230,4 +230,4 @@ SELECT products.product_id,product_name,count(products.product_id) as "total" FR
     ```
     - Output
 
-    ![image](q6_2.png)
+    ![image](https://raw.githubusercontent.com/KishanMaheta24/C4P1-Database-Practical/feature/Queries/imgs/q6_2.png)
